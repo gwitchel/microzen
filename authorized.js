@@ -5,10 +5,8 @@ window.onload = function(){
     if(token.length > 0 ){
         console.log(token)
         document.write("Token: ", token);
-        document.getElementById("getData").onclick = function(){
-            var data = httpGet('http://localhost:8080/allChats/' + token)
-            document.write(data)
-        }
+        var data = httpGet('http://localhost:8080/allChats/' + token)
+        document.write("Example Chat Data:" , data)
     } else {
         console.log("Not authorized")
      };
